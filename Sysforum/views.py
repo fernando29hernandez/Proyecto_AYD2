@@ -21,3 +21,9 @@ def add_tema(request):
             messages.add_message(request, messages.SUCCESS, "The post has been saved!")
             return HttpResponseRedirect("/tema/list/")
     return render(request, 'crear_tema.html', {'form': form})
+
+def ver_tema(request, pk):
+    tema = Tema.objects.get(id=pk)
+    return render(request, 'ver_tema.html', {'tema': tema})
+
+
