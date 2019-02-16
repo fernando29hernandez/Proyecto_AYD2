@@ -5,6 +5,5 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'Proyecto_AYD2.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^dashboard/', include('dashboard.urls', namespace = 'dash'))
 ]
