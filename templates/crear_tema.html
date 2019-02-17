@@ -1,0 +1,35 @@
+{% extends "dashboard.html" %}
+{% block title %}
+Publicacion de tema en Sysforum
+{% endblock %}
+ 
+{% block content %}
+<div class="row">
+        <div class="panel panel-default">
+                <div class="panel-body">
+    
+                        <div class="table table-responsive"> 
+                                <table class="table table-striped">
+                           
+                <form action="" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                <input name="submit" type="submit" class="btn btn-block btn-success" value="Submit">
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
+<!--finaliza el bloque content-->
+<!--heredamos el bloque footer-->
+{% block footer %}
+ <div class="navbar navbar-inverse navbar-fixed-bottom">
+ <center style="padding-top: 12px">
+ <small style="color: #fff">Footer Form</small>
+     </center>
+ </div>
+{% endblock %}
+<!--finaliza el bloque footer-->
