@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^dashboard/', include('dashboard.urls', namespace = 'dash')),
     url(r'^tema/list/', list_temas, name='list_temas'), #listado
     url(r'^tema/add/', add_tema, name='add_tema'), #formulario para añadir
-    url(r'^ver/(?P<pk>\d+)$', ver_tema, name='ver'),
-    
+    url(r'^ver/(?P<pk>\d+)$', ver_tema, name='ver'), 
+
 ]

@@ -20,3 +20,15 @@ class TemaForm(ModelForm):
             'titulo': 'Nombre',
             'descripcion': 'Descripcion',
         }
+
+class ComentarioForm(ModelForm):
+    class Meta:
+        model = Comentario
+        fields = ['contenido','tema_fk' ]
+        widgets = {
+            'contenido': TextInput(attrs = {'class':'form-control'}),
+            'tema_fk' : forms.HiddenInput(),           
+        }
+        labels={
+            'contenido': 'Contenido',
+        }
