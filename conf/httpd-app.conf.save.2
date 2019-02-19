@@ -1,0 +1,27 @@
+ <IfDefine !IS_DJANGOSTACK_LOADED> 
+Define IS_DJANGOSTACK_LOADED
+WSGIDaemonProcess wsgi-djangostack   processes=2 threads=15    display-name=%{GROUP}
+</IfDefine> 
+
+<Directory "/opt/bitnami/apps/django/django_projects/Proyecto_AYD2/Proyecto_AYD2">
+    Options +MultiViews
+    AllowOverride All
+    <IfVersion < 2.3 >
+        Order allow,deny
+        Allow from all
+    </IfVersion>
+    <IfVersion >= 2.3>
+        Require all granted
+    </IfVersion>
+    
+    WSGIProcessGroup wsgi-djangostack
+
+WSGIApplicationGroup %{GLOBAL}
+Require all granted
+                    
+</Directory>
+
+Alias /Proyecto_AYD2/static "/opt/bitnami/apps/django/django_projects/Proyecto_AYD2/Proyecto_AYD2/static"
+WSGIScriptAlias /Proyecto_AYD2 '/opt/bitnami/apps/django/django_projects/Proyecto_AYD2/Proyecto_AYD2/wsgi.py'
+                    
+<Directory <Directory 'path_to_your_project/static'> Order allow,deny Allow from all </Directory>> Order allow,deny Allow from all </Directory>

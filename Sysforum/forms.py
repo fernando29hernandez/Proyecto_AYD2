@@ -1,5 +1,4 @@
 from django import forms
-from django.forms.extras.widgets import SelectDateWidget
 from django.utils.safestring import mark_safe
 
 from django.forms import ModelForm, Textarea, TextInput, URLInput, PasswordInput, EmailInput

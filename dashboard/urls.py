@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from . import views
-from django.contrib.auth.views import logout
 from django.conf import settings
 
 urlpatterns = [

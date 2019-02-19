@@ -25,8 +25,7 @@ SECRET_KEY = 'mwrhgscr2@k*q_8bsu%c7(t9ir&59l6ncdm+rbh$0^2hzdb9(k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['35.185.51.141', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -111,11 +110,11 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '127.0.0.1',
+            'HOST': '/opt/bitnami/mysql/tmp/mysql.sock',
             'PORT': '3306',
             'NAME': 'proyecto_ayd2',
             'USER': 'root',
-            'PASSWORD': '123',
+            'PASSWORD': 'RdDfSNMTBkG3',
         }
     }
 # [END db_setup]
@@ -138,5 +137,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = 'static'
+
+STATIC_ROOT = "/opt/bitnami/apps/django/django_projects/Proyecto_AYD2/Proyecto_AYD2/static"
 STATIC_URL = '/static/'
