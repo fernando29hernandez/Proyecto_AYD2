@@ -6,18 +6,22 @@ Publicacion de tema en Sysforum
 {% block content %}
 <div class="row">
         <div class="panel panel-default">
+             
+            <div class="table table-responsive"> 
                 <div class="panel-body">
     
-                        <div class="table table-responsive"> 
-                                <table class="table table-striped">
+                                <table class="table table-striped" magin="auto" width="600" border="2" cellspacing="3" cellpadding="3" style="font-size: 10pt">
                            
-                <form action="" method="post">{% csrf_token %}
-                    {{ form.as_p }}
-                <input name="submit" type="submit" class="btn btn-block btn-success" value="Submit">
+                              <form action="" method="post">{% csrf_token %}
+                          {{ form.as_p }}
+                       <input name="submit" type="submit" class="btn  btn-success" value="Crear Publicacion">
             </form>
+                                </table>
+                        </div>
+                </div>
         </div>
         </div>
-    </div>
+        </div>
     </div>
 </div>
 </div>
